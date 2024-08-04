@@ -1,0 +1,35 @@
+services:
+  journey.api:
+    image: journeyapi:dev
+    container_name: "Journey.Api"
+    build:
+      args:
+        LAUNCHING_FROM_VS: true
+        BUILD_CONFIGURATION: Debug
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Journey.Api"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\repos\Journey\src\Journey.Api:/app:rw
+      - D:\repos\Journey:/src:rw
+      - C:\Users\fsena\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\fsena\.nuget\packages:/.nuget/packages:ro
+      - C:\Users\fsena\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\fsena\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\fsena\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\fsena\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - D:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - D:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/bin/Debug/net8.0/Journey.Api.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
+    tty: true
