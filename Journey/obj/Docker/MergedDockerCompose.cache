@@ -1,8 +1,8 @@
-name: dockercompose13059762650516925458
+name: dockercompose6313122915844397041
 services:
   journey.api:
     build:
-      context: D:\repos\Journey
+      context: D:\repos\journey-api\Journey
       dockerfile: src/Journey.Api/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -33,4 +33,4 @@ services:
           create_host_path: true
 networks:
   default:
-    name: dockercompose13059762650516925458_default
+    name: dockercompose6313122915844397041_default

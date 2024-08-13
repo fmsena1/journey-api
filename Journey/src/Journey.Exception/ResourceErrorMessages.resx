@@ -117,16 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ACTIVITY_NOT_FOUND" xml:space="preserve">
+    <value>Activity not found.</value>
+  </data>
+  <data name="DATE_NOT_WITHIN_TRAVEL_PERIOD" xml:space="preserve">
+    <value>Date not within travel period.</value>
+  </data>
   <data name="DATE_TRIP_MUST_BE_LATER_THAN_TODAY" xml:space="preserve">
-    <value>StartDate must</value>
+    <value>The date of the trip must be later than today.</value>
   </data>
   <data name="END_DATE_TRIP_MUST_BE_LATER_START_DATE" xml:space="preserve">
-    <value>EndDate must</value>
+    <value>The end date of the trip must be equal to or later than the start date.</value>
   </data>
   <data name="NAME_EMPTY" xml:space="preserve">
-    <value>Name must not be</value>
+    <value>The name cannot be empty.</value>
   </data>
-  <data name="UNKNOWN_ERROR" xml:space="preserve">
-    <value>Unknown error</value>
+  <data name="TRIP_NOT_FOUND" xml:space="preserve">
+    <value>Trip not found.</value>
   </data>
 </root>

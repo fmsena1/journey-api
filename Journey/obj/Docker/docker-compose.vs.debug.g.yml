@@ -15,8 +15,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - D:\repos\Journey\src\Journey.Api:/app:rw
-      - D:\repos\Journey:/src:rw
+      - D:\repos\journey-api\Journey\src\Journey.Api:/app:rw
+      - D:\repos\journey-api\Journey:/src:rw
       - C:\Users\fsena\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\fsena\.nuget\packages:/.nuget/packages:ro
       - C:\Users\fsena\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
