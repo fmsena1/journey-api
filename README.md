@@ -1,4 +1,4 @@
-<h1 style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+<h1 align="center">
   <img
     src=".github/nlw-journey-logo.png"
     title="Logo NLW Journey"
@@ -13,7 +13,7 @@
   <img src=".github/cover.png" alt="Capa do projeto" />
 </p>
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 5px;  flex-direction: row; margin: 5px">
+<div align="center">
   <img alt=".NET" src="https://img.shields.io/badge/.NET-5C2D91?logo=.net&logoColor=white&style=for-the-badge">
   
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge" />
@@ -26,7 +26,6 @@
  <a href="#-about">About</a> | 
  <a href="#-routes">Routes</a> | 
  <a href="#-setup">Setup</a> | 
- <a href="#-technologies">Technologies</a> | 
  <a href="#-license">License</a>
 </p>
 
